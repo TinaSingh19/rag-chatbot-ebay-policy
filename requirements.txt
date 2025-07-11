@@ -1,0 +1,9 @@
+pymupdf                 # for PDF parsing (fitz)
+spacy                   # for NLP and sentence splitting
+sentence-transformers   # for generating embeddings
+faiss-cpu               # for vector database indexing
+numpy                   # required by faiss and transformers
+tqdm                    # for progress bar during embedding
+python-dotenv           # for reading HuggingFace token from .env
+huggingface-hub         # to connect with InferenceClient
+streamlit               # for chatbot UI
