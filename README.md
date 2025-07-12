@@ -148,7 +148,14 @@ streamlit run app.py
 | LLM for Q&A      | Meta-LLaMA-3-8B-Instruct |
 | Vector DB        | FAISS                    |
 
+---
 
+## 🎥 Demo
+
+| Type     | Link                                                                 |
+|----------|----------------------------------------------------------------------|
+| 🔗 GitHub | [rag-chatbot-ebay-policy](https://github.com/TinaSingh19/rag-chatbot-ebay-policy) |
+| 📹 Video  | [Google Drive Demo Folder](https://drive.google.com/drive/folders/1MQlx_g6MX64-QhzMmVtoBxD2h3YzRE3P?usp=sharing) |
 
 
 
