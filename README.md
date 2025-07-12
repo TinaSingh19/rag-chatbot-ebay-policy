@@ -113,30 +113,30 @@ This project is a Retrieval-Augmented Generation (RAG) chatbot that answers ques
 
 1. Clone the Repository
 
-git clone https://github.com/your-username/rag-chatbot-ebay-policy.git
-cd rag-chatbot-ebay-policy
+ git clone https://github.com/your-username/rag-chatbot-ebay-policy.git
+ cd rag-chatbot-ebay-policy
 
 2. Create & Activate a Virtual Environment (recommended to avoid conflicts)
 
-python -m venv venv
-On Windows: .venv\Scripts\activate
-macOS/Linux: source .venv/bin/activate
+ python -m venv venv
+ On Windows: .venv\Scripts\activate
+ macOS/Linux: source .venv/bin/activate
 
 3. Install Dependencies
 
-pip install -r requirements.txt
+ pip install -r requirements.txt
 
 4. Run Preprocessing Steps
 
-cd notebooks
-python extract_text_from_pdf.py
-python chunk_text.py
-python create_embeddings.py
-cd ..
+ cd notebooks
+ python extract_text_from_pdf.py
+ python chunk_text.py
+ python create_embeddings.py
+ cd ..
 
 5. Launch the Streamlit App
 
-streamlit run app.py
+ streamlit run app.py
 
 ---
 
