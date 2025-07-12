@@ -4,7 +4,7 @@ This project is a Retrieval-Augmented Generation (RAG) chatbot that answers ques
 
 ---
 
-Project Architecture & Flow
+## Project Architecture & Flow
 
 
                          ┌────────────┐
@@ -38,7 +38,7 @@ Project Architecture & Flow
 
 ---
 
-Project Structure
+## Project Structure
 
 .
 ├── app.py                       # Streamlit chatbot app with streaming response
@@ -63,13 +63,13 @@ Project Structure
 
 ---
 
-Components Explained
+## Components Explained
 
 ---
 
 1. **Document Preprocessing**
 - **File:** `extract_text_from_pdf.py`  
-- Cleans headers/footers like **"eBay"** or **"Page X"**  
+- Cleans headers/footers like "eBay" or "Page X"  
 - Saves cleaned output as `cleaned_text.txt`
 
 ---
@@ -109,7 +109,7 @@ Components Explained
 
 ---
 
-How to Run the Project Locally
+## How to Run the Project Locally
 
 1. Clone the Repository
 
@@ -140,7 +140,7 @@ streamlit run app.py
 
 ---
 
-Model & Embedding Choices
+## Model & Embedding Choices
 
 | Component        | Model Used               |
 |------------------|--------------------------|
