@@ -65,34 +65,44 @@ Project Structure
 
 Components Explained
 
-1. Document Preprocessing
-- File: `extract_text_from_pdf.py`
-- Cleans headers/footers like "eBay" or "Page X"
+---
+
+1. **Document Preprocessing**
+- **File:** `extract_text_from_pdf.py`  
+- Cleans headers/footers like **"eBay"** or **"Page X"**  
 - Saves cleaned output as `cleaned_text.txt`
 
-2. Sentence-Aware Chunking
-- File: `chunk_text.py`
-- Uses `spaCy` to split sentences into ~150-word chunks
+---
+
+2. **Sentence-Aware Chunking**
+- **File:** `chunk_text.py`  
+- Uses **spaCy** to split sentences into ~150-word chunks  
 - Output is saved in `chunks/document_chunks.txt`
 
-3. Embeddings & Vector Index
-- File: `create_embeddings.py`
-- Uses `BAAI/bge-small-en` to generate sentence embeddings
-- Embeddings are indexed using `FAISS`
+---
+
+3. **Embeddings & Vector Index**
+- **File:** `create_embeddings.py`  
+- Uses **BAAI/bge-small-en** to generate sentence embeddings  
+- Embeddings are indexed using **FAISS**  
 - Output: `faiss_index.idx` and `chunks.pkl` saved in `/vectordb/`
 
-4. RAG Pipeline (Retriever + Generator)
-- File: `src/rag_pipeline.py`
-- Loads the FAISS vector DB and retrieves relevant chunks
-- Injects them into a prompt template for the LLM
-- Calls the Meta-LLaMA-3-8B-Instruct model from Hugging Face
-- Streams responses in real-time
-- `.env` file (not shared) is used to store the `HF_TOKEN` safely
+---
 
-5. Streaming Chatbot Interface  
-- File: `app.py`  
-- Built using Streamlit 
-- Key features:  
+4. **RAG Pipeline (Retriever + Generator)**
+- **File:** `src/rag_pipeline.py`  
+- Loads the **FAISS** vector database and retrieves relevant chunks  
+- Injects them into a prompt template for the LLM  
+- Calls the **Meta-LLaMA-3-8B-Instruct** model from **Hugging Face**  
+- Streams responses in real-time  
+- Uses a `.env` file (not shared) to store the **HF_TOKEN** securely
+
+---
+
+5. **Streaming Chatbot Interface**
+- **File:** `app.py`  
+- Built using **Streamlit**  
+- **Key Features:**  
   - Real-time token-level streaming  
   - Displays model info and source highlights  
   - Option to clear/reset chat
