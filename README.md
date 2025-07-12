@@ -109,6 +109,15 @@ This project is a Retrieval-Augmented Generation (RAG) chatbot that answers ques
 
 ---
 
+## 💻 How to Run the Project Locally
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/ebay-policy-assistant.git
+cd ebay-policy-assistant
+
+
 ## How to Run the Project Locally
 
 1. Clone the Repository
