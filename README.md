@@ -6,7 +6,7 @@ This project is a Retrieval-Augmented Generation (RAG) chatbot that answers ques
 
 Project Architecture & Flow
 
-```text
+
                          ┌────────────┐
                          │  Raw PDF   │
                          └─────┬──────┘
