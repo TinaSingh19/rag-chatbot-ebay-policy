@@ -4,7 +4,7 @@ This project is a Retrieval-Augmented Generation (RAG) chatbot that answers ques
 
 ---
 
-## Project Architecture & Flow
+Project Architecture & Flow
 
 ```text
                          ┌────────────┐
@@ -38,7 +38,7 @@ This project is a Retrieval-Augmented Generation (RAG) chatbot that answers ques
 
 ---
 
-## Project Structure
+Project Structure
 
 .
 ├── app.py                       # Streamlit chatbot app with streaming response
@@ -63,78 +63,74 @@ This project is a Retrieval-Augmented Generation (RAG) chatbot that answers ques
 
 ---
 
-## Components Explained
+Components Explained
 
-### 1. **Document Preprocessing**
+1. Document Preprocessing
 - File: `extract_text_from_pdf.py`
 - Cleans headers/footers like "eBay" or "Page X"
 - Saves cleaned output as `cleaned_text.txt`
 
-### 2. **Sentence-Aware Chunking**
+2. Sentence-Aware Chunking
 - File: `chunk_text.py`
 - Uses `spaCy` to split sentences into ~150-word chunks
 - Output is saved in `chunks/document_chunks.txt`
 
-### 3. **Embeddings & Vector Index**
+3. Embeddings & Vector Index
 - File: `create_embeddings.py`
 - Uses `BAAI/bge-small-en` to generate sentence embeddings
 - Embeddings are indexed using `FAISS`
 - Output: `faiss_index.idx` and `chunks.pkl` saved in `/vectordb/`
 
-### 4. **RAG Pipeline (Retriever + Generator)**
+4. RAG Pipeline (Retriever + Generator)
 - File: `src/rag_pipeline.py`
 - Loads the FAISS vector DB and retrieves relevant chunks
 - Injects them into a prompt template for the LLM
-- Calls the **Meta-LLaMA-3-8B-Instruct** model from Hugging Face
+- Calls the Meta-LLaMA-3-8B-Instruct model from Hugging Face
 - Streams responses in real-time
 - `.env` file (not shared) is used to store the `HF_TOKEN` safely
 
-### 5. Streaming Chatbot Interface  
-**File:** `app.py`  
-- Built using **Streamlit**  
-- **Key features:**  
+5. Streaming Chatbot Interface  
+- File: `app.py`  
+- Built using Streamlit 
+- Key features:  
   - Real-time token-level streaming  
   - Displays model info and source highlights  
   - Option to clear/reset chat
 
 ---
 
-## 💻 How to Run the Project Locally
+How to Run the Project Locally
 
-### 1. Clone the Repository
+1. Clone the Repository
 
-```bash
 git clone https://github.com/your-username/rag-chatbot-ebay-policy.git
 cd rag-chatbot-ebay-policy
 
-### 2. Create & Activate a Virtual Environment
+2. Create & Activate a Virtual Environment (recommended to avoid conflicts)
 
-```bash
 python -m venv venv
-source venv/bin/activate     # On Windows: venv\Scripts\activate
+On Windows: .venv\Scripts\activate
+macOS/Linux: source .venv/bin/activate
 
-### 3. Install Dependencies
+3. Install Dependencies
 
-```bash
 pip install -r requirements.txt
 
-### 4. Run Preprocessing Steps
+4. Run Preprocessing Steps
 
-```bash
 cd notebooks
 python extract_text_from_pdf.py
 python chunk_text.py
 python create_embeddings.py
 cd ..
 
-### 5. Launch the Streamlit App
+5. Launch the Streamlit App
 
-```bash
 streamlit run app.py
 
 ---
 
-## Model & Embedding Choices
+Model & Embedding Choices
 
 | Component        | Model Used               |
 |------------------|--------------------------|
