@@ -109,43 +109,34 @@ This project is a Retrieval-Augmented Generation (RAG) chatbot that answers ques
 
 ---
 
-## 💻 How to Run the Project Locally
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/ebay-policy-assistant.git
-cd ebay-policy-assistant
-
-
 ## How to Run the Project Locally
 
-1. Clone the Repository
+**Clone the Repository**
 
- git clone https://github.com/your-username/rag-chatbot-ebay-policy.git
- cd rag-chatbot-ebay-policy
+git clone https://github.com/your-username/rag-chatbot-ebay-policy.git
+cd rag-chatbot-ebay-policy
 
-2. Create & Activate a Virtual Environment (recommended to avoid conflicts)
+**Create & Activate a Virtual Environment** (recommended to avoid conflicts)
 
- python -m venv venv
- On Windows: .venv\Scripts\activate
- macOS/Linux: source .venv/bin/activate
+- python -m venv venv
+- On Windows: .venv\Scripts\activate
+- macOS/Linux: source .venv/bin/activate
 
-3. Install Dependencies
+**Install Dependencies**
 
- pip install -r requirements.txt
+pip install -r requirements.txt
 
-4. Run Preprocessing Steps
+**Run Preprocessing Steps**
 
- cd notebooks
- python extract_text_from_pdf.py
- python chunk_text.py
- python create_embeddings.py
- cd ..
+cd notebooks
+python extract_text_from_pdf.py
+python chunk_text.py
+python create_embeddings.py
+cd ..
 
-5. Launch the Streamlit App
+**Launch the Streamlit App**
 
- streamlit run app.py
+streamlit run app.py
 
 ---
 
